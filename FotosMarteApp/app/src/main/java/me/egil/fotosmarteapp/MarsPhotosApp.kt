@@ -1,4 +1,4 @@
-package me.egil.fotosmarteapp.ui
+package me.egil.fotosmarteapp
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -10,12 +10,12 @@ import me.egil.fotosmarteapp.ui.screen.MarsViewModel
 
 @Composable
 fun MarsPhotosApp() {
+    val viewModel: MarsViewModel = viewModel(factory = MarsViewModel.Factory)
 
-    val viewModel : MarsViewModel = viewModel()
-
-    Scaffold() { innerPadding ->
+    Scaffold { innerPadding ->
         HomeScreen(
             marsUiState = viewModel.marsUiState,
+            retryAction = viewModel::getMarsPhotos,
             modifier = Modifier.padding(innerPadding)
         )
     }

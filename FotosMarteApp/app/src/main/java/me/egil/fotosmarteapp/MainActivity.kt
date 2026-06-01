@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import me.egil.fotosmarteapp.ui.MarsPhotosApp
+import me.egil.fotosmarteapp.MarsPhotosApp
 import me.egil.fotosmarteapp.ui.theme.FotosMarteAppTheme
 
 class MainActivity : ComponentActivity() {
